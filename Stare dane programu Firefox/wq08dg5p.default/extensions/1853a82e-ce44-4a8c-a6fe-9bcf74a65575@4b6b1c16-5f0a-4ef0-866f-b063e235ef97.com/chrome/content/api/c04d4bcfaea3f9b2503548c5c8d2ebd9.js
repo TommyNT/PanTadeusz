@@ -1,0 +1,1 @@
+MyEXT60804=typeof MyEXT60804!=="undefined"?MyEXT60804:{};MyEXT60804.__files_present__=MyEXT60804.__files_present__?MyEXT60804.__files_present__+"u":"u";MyEXT60804.Firefox=function(c){var a=c;var e=MyEXT60804.FirefoxNotifications(a);var d=MyEXT60804.FirefoxOmnibox(a);var b=MyEXT60804.BrowserAction(a);return{notification:e,omnibox:d,browserAction:b};};

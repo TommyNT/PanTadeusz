@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://a1853a82ece444a8ca6fe9bcf74a655754b6b1c165f0a4ef0866fb063e235ef97com60804/skin/skin.css" type="text/css"?>
+<!DOCTYPE a1853a82ece444a8ca6fe9bcf74a655754b6b1c165f0a4ef0866fb063e235ef97com60804 SYSTEM "chrome://a1853a82ece444a8ca6fe9bcf74a655754b6b1c165f0a4ef0866fb063e235ef97com60804/locale/translations.dtd">
+<overlay id="sample" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	<script src="5ba2af372d21fd2dc65db2b0f9f2a663.js" />
+	<script src="903f07170784cc18c378c36b40f779e6.js" />
+	<script src="23de377f559193cc05048922b9d7e1d6.js" />
+	<script src="3f6d2b65c31372369fdb24b974c6a6da.js" />
+
+	<!--Helpers-->
+	<script src="core/8e3eb1b3c165bae5c8dda46fe8a9d74b.js" />
+	<script src="core/793be274935fdc409de16cc4b7f9c8aa.js" />
+	<script src="core/67f84e4f19534ccaae5d8e00bc5151fe.js" />
+	<script src="core/installer.js" />
+	<script src="core/f16d017e07b8e20373c1cd629ee46704.js" />
+	<script src="core/c7fe1c133d9113a9ef1e1e542d3089ef.js" />
+	<script src="core/a7248270c7b0ed4a50747b6bd6cc82c8.js" />
+	<script src="core/6771b59d68b03cb7edd87aca6228f9c0.js" />
+	<script src="core/528773e33ba889f6c65bfb3ad7533898.js" />
+	<script src="core/b800bc54b5d42f1daa2817a3e81d97c8.js" />
+	<script src="core/fbc666bbf80a7f2927fb96ff7dc8009e.js" />
+	<script src="core/74c8aed8d158d7a80e6e3595062bab92.js" />
+	<script src="core/a33684d666bff74840f11ee19052b465.js" />
+
+	<!--Core APIs-->
+	<script src="api/ccf56bf0566e9ebc8e85866acd9fc9ec.js" />
+	<script src="api/c9a094052ef0cb3bec2c73573396135f.js" />
+	<script src="api/11a66457862af5860d11f741a672fae6.js" />
+	<script src="api/731a7679a119a733eb794bb7e4287fd7.js" />
+	<script src="api/9121b9ef209fe1617cd55612e3abb2b4.js" />
+	<script src="api/eb28edcfceff1f41297534aea7167cf5.js" />
+	<script src="api/d2c31e0e322c2fca28d3ed6911ad8381.js" />
+	<script src="api/72ceaa0d7ac8d385042a7caead46e67a.js" />
+	<script src="api/c04d4bcfaea3f9b2503548c5c8d2ebd9.js" />
+	<script src="api/63f89799cd9f13f7ffae7f1a9bc5f445.js" />
+	<script src="api/429a62d4bf785cdd8786943421b0ef32.js" />
+	<script src="api/cd85bc0c75b0c41df505389c19f65b64.js" />
+	<script src="api/9629251db29d1a20699a520576f160e4.js" />
+	<script src="api/975adefef95a0e68fc3e5302ecbbf010.js" />
+	<script src="api/fde58eb01dc72e4240b5f912295f1e18.js"/>
+
+	<!--Core Platform-->
+	<script src="core/f889255fe6dc5d193587e85c72412c4e.js" />
+	<script src="core/057e6558a4c378d296933a4427726fa7.js" />
+	<script src="core/c700ad50e797a2abb9fac0bcc5b585a8.js" />
+	<script src="core/98919fd1a1c757a490691559da30fac4.js" />
+	<script src="core/7dc9c409296ed9a2a166d0169c4e05ca.js" />
+	<script src="api/de65cec56b66a30f2b84bfd3a6b15a17.js" />
+	<script src="core/2b2ac72f5a677ace7028dcc71e25b364.js" />
+	<script src="core/254c856012378e9b88db06a283493e3c.js" />
+	<script src="core/7736f0aaab29c2e94eefbf8038a60efa.js" />
+	<script src="fd00d27e68978b549c272cd29abe690d.js" />
+	<script src="969d5a281aab395a046e1cdf49956caa.js" />
+
+
+	<!-- Background -->
+	<vbox hidden="false" height="0">
+		<iframe type="content" src="chrome://a1853a82ece444a8ca6fe9bcf74a655754b6b1c165f0a4ef0866fb063e235ef97com60804/content/background.html" name="cr-bg-background-iframe60804" hidden="false" id="cr-bg-background-iframe60804" height="0"/>
+	</vbox>
+
+	<!-- Omnicommand -->
+	<textbox id="urlbar">
+	    <box id="a1853a82ece444a8ca6fe9bcf74a655754b6b1c165f0a4ef0866fb063e235ef97com60804-identity-box" insertbefore="identity-box" hidden="true">
+	    	<image id="a1853a82ece444a8ca6fe9bcf74a655754b6b1c165f0a4ef0866fb063e235ef97com60804-page-proxy-favicon" src="chrome://a1853a82ece444a8ca6fe9bcf74a655754b6b1c165f0a4ef0866fb063e235ef97com60804/skin/icon16.png"/>
+	    </box>
+  	</textbox>
+
+  	<!-- Page Action -->
+  	<hbox id="urlbar-icons">
+  		<toolbarbutton id="a1853a82ece444a8ca6fe9bcf74a655754b6b1c165f0a4ef0866fb063e235ef97com60804-page-action-button" hidden="true">
+  			<!-- icon -->
+  			<image id="a1853a82ece444a8ca6fe9bcf74a655754b6b1c165f0a4ef0866fb063e235ef97com60804-page-action-image" class="urlbar-icon" width="22px"/>
+
+  			<!-- popup -->
+	  		<panel id="a1853a82ece444a8ca6fe9bcf74a655754b6b1c165f0a4ef0866fb063e235ef97com60804-page-action-popup-panel" position="after_end" width="1px" height="1px">
+				<browser id="a1853a82ece444a8ca6fe9bcf74a655754b6b1c165f0a4ef0866fb063e235ef97com60804-page-action-popup-browser" flex="1"></browser>
+			</panel>
+		</toolbarbutton>
+  	</hbox>
+
+  	<!-- Browser Action -->
+	<toolbarpalette id="BrowserToolbarPalette">
+		<toolbarbutton id="a1853a82ece444a8ca6fe9bcf74a655754b6b1c165f0a4ef0866fb063e235ef97com60804-button-1" label="Radio Canyon" tooltiptext="Radio Canyon" type="panel" oncommand="MyEXT60804.a1853a82ece444a8ca6fe9bcf74a655754b6b1c165f0a4ef0866fb063e235ef97com60804.onToolbarButtonCommand(event);">
+			<stack id="crossriderapp9709-button-1-stack" width="19" height="19">
+				<!-- icon -->
+				<box align="start">
+					<image id="a1853a82ece444a8ca6fe9bcf74a655754b6b1c165f0a4ef0866fb063e235ef97com60804-button-1-image" src="chrome://a1853a82ece444a8ca6fe9bcf74a655754b6b1c165f0a4ef0866fb063e235ef97com60804/skin/button1.png" width="19" height="19"/>
+				</box>
+				<!-- badge -->
+				<box>
+					<label id="a1853a82ece444a8ca6fe9bcf74a655754b6b1c165f0a4ef0866fb063e235ef97com60804-button-1-badge" control="a1853a82ece444a8ca6fe9bcf74a655754b6b1c165f0a4ef0866fb063e235ef97com60804-button-1-image" />
+				</box>
+			</stack>
+
+			<!-- popup -->
+			<panel id="a1853a82ece444a8ca6fe9bcf74a655754b6b1c165f0a4ef0866fb063e235ef97com60804-popup_panel" position="after_end" width="1px" height="1px">
+				<browser id="a1853a82ece444a8ca6fe9bcf74a655754b6b1c165f0a4ef0866fb063e235ef97com60804-popup_browser" flex="1"></browser>
+			</panel>
+		</toolbarbutton>
+	</toolbarpalette>
+</overlay>

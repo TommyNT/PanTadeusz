@@ -1,0 +1,1 @@
+window.MyEXT60804={};

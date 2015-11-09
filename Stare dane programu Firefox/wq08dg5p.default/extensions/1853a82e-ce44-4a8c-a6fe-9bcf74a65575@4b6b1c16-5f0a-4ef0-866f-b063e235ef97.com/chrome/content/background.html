@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <div id="map"></div>
+    <script type="text/javascript" charset="utf-8">
+      var _messageListenerCallback = {};
+      var listener_id_counter = 0;
+
+      function reloadBackgroundPage() {
+        location.reload(true);
+      }
+
+      function runBackgroundPage() {
+        var element = document.createElement("cr_run_background");
+        document.documentElement.appendChild(element);
+
+        var evt = document.createEvent("Events");
+        evt.initEvent("CrossRiderInternalHTML__RunBackgroundCode60804", true, false);
+        element.dispatchEvent(evt);
+      }
+
+
+      function listen(callbackFunction) {
+        ++listener_id_counter;
+        _messageListenerCallback[listener_id_counter] = { callback: callbackFunction };
+
+        return listener_id_counter;
+      }
+
+      function removeListen(listenerId) {
+        if(typeof(listenerId) === "undefined") {
+          _messageListenerCallback = {};
+          return true;
+        }
+
+        // not valid id, quit the function ..
+        if(typeof(listenerId) !== "number") return false;
+
+        // if the listner id is at the correct range..
+        if(_messageListenerCallback.hasOwnProperty(listenerId)) {
+          delete _messageListenerCallback[listenerId];
+          return true;
+        }
+
+        return false;
+      }
+
+      function newMessage(msg) {
+        for(messageListener in _messageListenerCallback) {
+          if(_messageListenerCallback.hasOwnProperty(messageListener)) {
+            var tmpMsg;
+            try {
+             tmpMsg = JSON.parse(JSON.stringify(msg));
+            }catch (e) {
+              // Not much to do
+            }
+            _messageListenerCallback[messageListener].callback(tmpMsg);
+          }
+        }
+      }
+
+      // setTimeout(runBackgroundPage, 1);
+      window.onload = function() {
+        runBackgroundPage();
+      }
+    </script>
+  </body>
+</html>
